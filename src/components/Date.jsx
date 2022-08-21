@@ -26,4 +26,11 @@ function GetDate() {
 	);
 }
 
+function GetAge() {
+	const age = new Date().getFullYear() - 1994;
+	return age;
+}
+
 export default GetDate;
+
+export { GetAge };

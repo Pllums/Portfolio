@@ -58,6 +58,7 @@ function Projects(props) {
 function CreateNewProject(project) {
 	return (
 		<Projects
+			key={project.key}
 			title={project.title}
 			img={project.img}
 			content={project.content}

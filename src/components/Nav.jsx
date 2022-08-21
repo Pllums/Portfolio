@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 function Nav() {
 	return (
-		<nav>
-			<navbar className="navbar navbar-expand-md bg-transparent navbar-light">
+		<section>
+			<nav className="navbar navbar-expand-md bg-transparent navbar-light">
 				<motion.a
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.9 }}
@@ -19,7 +19,7 @@ function Nav() {
 					rel="noreferrer"
 					target="_blank"
 					href="https://github.com/Pllums">
-					<i class="fa-brands fa-github"></i>
+					<i className="fa-brands fa-github"></i>
 				</motion.a>
 				<motion.a
 					whileHover={{ scale: 1.1 }}
@@ -28,8 +28,8 @@ function Nav() {
 					href="#about-me">
 					About Me
 				</motion.a>
-			</navbar>
-		</nav>
+			</nav>
+		</section>
 	);
 }
 
