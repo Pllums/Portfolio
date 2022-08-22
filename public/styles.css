@@ -12,7 +12,7 @@ body {
 
 .wrapper {
 	height: 100vh;
-	overflow-y: hidden;
+	overflow-y: auto;
 	overflow-x: hidden;
 	perspective: 10px;
 }
@@ -163,15 +163,24 @@ header i {
 .mw-hero {
 	color: aliceblue;
 	padding-top: 7rem;
+	margin-left: 2rem;
 }
 .mw-hero h1 {
-	font-size: 5rem;
+	font-size: 4rem;
 	margin-bottom: 4rem;
 }
 
 .mw-hero-text {
 	font-size: 1.2rem;
 	max-width: 50ch;
+}
+
+.mw-contrast-stripe {
+	background-color: aliceblue;
+	background-size: cover;
+
+	height: 100px;
+	width: 100%;
 }
 /* Projects Styling */
 

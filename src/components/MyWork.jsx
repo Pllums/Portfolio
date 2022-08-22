@@ -15,7 +15,7 @@ export default function MyWork() {
 						</span>
 					</div>
 				</div>
-				<div className=""></div>
+				<div className="mw-contrast-stripe"></div>
 			</div>
 		</section>
 	);
