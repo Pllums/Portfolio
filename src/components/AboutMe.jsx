@@ -9,40 +9,41 @@ function AboutMe() {
 	const isInView = useInView(aboutMeRef, { once: true });
 
 	return (
-		<section className="about-me-wrapper">
-			<div className="about-me-background row">
-				<div ref={aboutMeRef} className="col-md-4 m-auto">
-					{isInView && <AboutMeText isInView={isInView} />}
+		<>
+			<section className="about-me-background">
+				<div class="purple-triangle">
+					<svg
+						data-name="Layer 1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 1200 120"
+						preserveAspectRatio="none">
+						<path
+							d="M1200 0L0 0 892.25 114.72 1200 0z"
+							class="shape-fill"></path>
+					</svg>
 				</div>
+				<div className="about-me-wrapper row">
+					<div ref={aboutMeRef} className="col-md-4 m-auto">
+						{isInView && <AboutMeText isInView={isInView} />}
+					</div>
 
-				<div className="img-fluid col-md-4 mx-auto ">
-					<img className="img-fluid" src="./images/Arik.jpg"></img>
-				</div>
-
-				{/* <div className="about-me-background row">
-				<div ref={aboutMeRef} className="about-me-text-wrapper col-md-4 ">
-					{isInView && <AboutMeTw isInView={isInView} />}
-				</div>
-				<div className="about-me-img-wrapper img-fluid col-md-4 ">
-					<img className="img-fluid" src="./images/Arik.jpg"></img>
-				</div>
-				<div className="about-me-text-wrapper col-md-2 ">
-					<div className="about-me-text">
-						<h2>Some Title</h2>
-						<span>
-							Hey there, it's nice to meet you. Arik Abdullah is more than just
-							a name on this website. I am married to the most amazing woman and
-							the father of two magnificent children. For the first nine years
-							of my professional career I was a fulltime firefighter and have
-							been blessed to make an impact on alot of people. However, now I
-							am looking to make an impact for myself and my family by working
-							with something I enjoy{" "}
-						</span>
+					<div className="img-fluid col-md-4 mx-auto ">
+						<img className="img-fluid" src="./images/Arik.jpg"></img>
 					</div>
 				</div>
-			</div> */}
-			</div>
-		</section>
+				<div class="blue-wave">
+					<svg
+						data-name="Layer 1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 1200 120"
+						preserveAspectRatio="none">
+						<path
+							d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+							class="shape-fill"></path>
+					</svg>
+				</div>
+			</section>
+		</>
 	);
 }
 

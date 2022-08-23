@@ -8,6 +8,14 @@ body {
 	line-height: 1.6;
 }
 
+.spacer {
+	aspect-ratio: 960/300;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
 /* CSS only paralax scroll */
 
 .wrapper {
@@ -89,16 +97,64 @@ header i {
 
 /* About me styling */
 
-.about-me-wrapper {
+.about-me-background {
 	width: 100%;
-	background-color: #493a3a;
+	background-color: #6b59e2;
+	/* background-color: #3f3c71; */
+	/* background-color: #493a3a;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23635151' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%237c6969' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23938484' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23a9a0a0' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23bfbbbb' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23d6d5d5' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: cover; */
 	padding: 5rem;
+	position: relative;
 }
 
-.about-me-background {
+.purple-layer {
+	background-image: url(./images/svgs/purple-layers.svg);
+}
+
+.blue-wave {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.blue-wave svg {
+	position: relative;
+	display: block;
+	width: calc(101% + 1.3px);
+	height: 157px;
+}
+
+.blue-wave .shape-fill {
+	fill: #203e56;
+}
+
+.purple-triangle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.purple-triangle svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 295px;
+}
+
+.purple-triangle .shape-fill {
+	fill: #2d2b55;
+}
+
+.about-me-wrapper {
 	margin: 0 auto;
 	max-width: 2560px;
 	height: 1300px;
@@ -106,6 +162,7 @@ header i {
 
 .img-fluid {
 	text-align: center;
+	margin: auto;
 }
 
 .img-fluid img {
@@ -151,7 +208,7 @@ header i {
 
 .my-work-section {
 	height: 100vh;
-	background-color: #140942;
+	background-color: #001220;
 }
 
 .mw-content-wrapper {
@@ -162,7 +219,6 @@ header i {
 
 .mw-hero {
 	color: aliceblue;
-	padding-top: 7rem;
 	margin-left: 2rem;
 }
 .mw-hero h1 {
@@ -176,7 +232,7 @@ header i {
 }
 
 .mw-contrast-stripe {
-	background-color: aliceblue;
+	background-color: #011728;
 	background-size: cover;
 
 	height: 100px;
