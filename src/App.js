@@ -14,9 +14,6 @@ function App() {
 			<Header />
 			<AboutMe /> {/*<Typewriter /> in here*/}
 			<MyWork />
-			<section id="my-work" className="my-work">
-				<div className="row">{projects.map(CreateNewProject)}</div>
-			</section>
 		</div>
 	);
 }

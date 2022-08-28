@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { GetAge } from "./Date";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 export default function AboutMeText() {
 	const [twIsDone, setTwIsDone] = useState(false);
@@ -11,13 +10,12 @@ export default function AboutMeText() {
 	const [twIsFinished, setTwIsFinished] = useState(false);
 	const isFinished = () => setTwIsFinished(true);
 
-	const [isHovering, setIsHovering] = useState(false);
-	const hoverSet = () => setIsHovering(true);
+	const [isClicked, setIsClicked] = useState(false);
+	const clickSet = () => setIsClicked(!isClicked);
 
 	return (
 		<>
 			<motion.div
-				whileHover={{}}
 				animate={{ opacity: [0, 1] }}
 				transition={{ times: [0, 0.5] }}
 				className="about-me-text-wrapper">
@@ -52,7 +50,7 @@ export default function AboutMeText() {
 								twIsDone={twIsDone}
 								options={{
 									cursor: "_",
-									delay: 20,
+									delay: 10,
 								}}
 								onInit={(typewriter) => {
 									typewriter
@@ -68,28 +66,37 @@ export default function AboutMeText() {
 				</motion.div>
 			</motion.div>
 			<motion.div
-				whileHover={hoverSet}
-				mous
+				onClick={clickSet}
 				animate={{ opacity: twIsFinished ? 1 : 0 }}
 				className="about-me-text-wrapper">
 				<div className="about-me-text">
 					<h2>My Values</h2>
-					<ul>
-						<li>Integrity</li>
-						<li>Transparency</li>
-						<li>Authenticity</li>
-						<li>Dependability</li>
-					</ul>
-					{isHovering && (
-						<motion.ul
-							isHovering={isHovering}
-							animate={{ opacity: isHovering ? 1 : 0 }}>
-							<li>Honesty</li>
-							<li>Empathy</li>
-							<li>Respect</li>
-							<li>Open Mindedness</li>
-						</motion.ul>
-					)}
+					<div style={{ display: isClicked ? "none" : "inline" }}>
+						<ul>
+							<li>Integrity</li>
+							<li>Transparency</li>
+							<li>Authenticity</li>
+							<li>Dependability</li>
+						</ul>
+					</div>
+					<div>
+						{isClicked && (
+							<>
+								<span style={{ width: "10ch" }}>
+									At Diversity Today, we believe it's very easy to be a HERO.
+									All you need are:
+								</span>
+								<motion.ul
+									isClicked={isClicked}
+									animate={{ opacity: isClicked ? 1 : 0 }}>
+									<li>Honesty</li>
+									<li>Empathy</li>
+									<li>Respect</li>
+									<li>Open Mindedness</li>
+								</motion.ul>
+							</>
+						)}
+					</div>
 				</div>
 			</motion.div>
 		</>
