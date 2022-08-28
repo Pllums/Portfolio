@@ -7,7 +7,7 @@
 }
 
 body {
-	background-color: rgb(45, 53, 78);
+	background: linear-gradient(to bottom, #001220, #001f36);
 	margin: 0;
 	padding: 0;
 	font-family: "Raleway", sans-serif;
@@ -250,6 +250,18 @@ header i {
 	position: absolute;
 	bottom: 40%;
 }
+
+@media (max-width: 1920px) {
+	.mw-hero {
+		transform: translateY(-10rem);
+	}
+}
+@media (max-width: 1920px) {
+	.mw-contrast-stripe {
+		padding-top: 5rem;
+	}
+}
+
 /* Projects Styling */
 
 .project-grid {
@@ -297,7 +309,7 @@ header i {
 
 .hover-card {
 	background-color: rgba(0, 0, 0, 0.295);
-	width: inherit;
+	width: 100%;
 	height: 100%;
 	position: absolute;
 	display: flex;
@@ -326,7 +338,7 @@ header i {
 	margin: auto;
 	position: relative;
 	/* padding: 3rem 5rem; */
-	width: 50rem;
+	width: fit-content;
 }
 
 .test-card img {

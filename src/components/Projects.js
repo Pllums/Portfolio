@@ -11,6 +11,7 @@ const projects = [
 			"Squash-It is a mock bug submit and tracking site where users can register as employees and are then able to work assign themselves a bug, list any work they have done to correct the fake bugs and any user can submit a bug without logging in.",
 		tech: "EJS, Node.js, HTML, CSS, MongoDB",
 		codeURL: "https://github.com/Pllums/Bug-Tracker",
+		site: "",
 	},
 	{
 		id: 1,
@@ -21,6 +22,7 @@ const projects = [
 			"This is a site I made for my wife's photography business. The site features a rich landing page, portfolio pages and contact page.",
 		tech: "HTML, CSS, JavaScript, Node.js",
 		codeURL: "https://github.com/Pllums/Boudoir-X-Alyssa",
+		site: "",
 	},
 	{
 		id: 2,
@@ -141,12 +143,13 @@ function Projects3() {
 					layoutId={project.title}
 					onMouseEnter={() => setIsHovering(!isHovering)}
 					onMouseLeave={() => setIsHovering(!isHovering)}
-					onClick={() => setSelectedId(project.title)}
 					style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px #000" }}
 					className="test-card">
 					<img src={project.img}></img>
 					{isHovering && (
-						<motion.div className="hover-card">
+						<motion.div
+							className="hover-card"
+							onClick={() => setSelectedId(project)}>
 							<motion.h2
 								layout
 								initial={{ opacity: 0, y: 100 }}
