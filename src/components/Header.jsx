@@ -9,14 +9,15 @@ function Header() {
 			<img className="background" src="./images/HeaderBackground.png"></img>
 			<motion.div
 				className="title"
-				initial={{ opacity: 0, y: -2000, x: -2000 }}
-				animate={{ opacity: 1, y: 0, x: 0 }}
-				transition={{
-					type: "spring",
-					damping: 10,
-					stiffness: 100,
-					duration: 1.5,
-				}}>
+				// initial={{ opacity: 0, y: -2000, x: -2000 }}
+				// animate={{ opacity: 1, y: 0, x: 0 }}
+				// transition={{
+				// 	type: "spring",
+				// 	damping: 10,
+				// 	stiffness: 100,
+				// 	duration: 1.5,
+				// }}
+			>
 				<GetDate />
 				<motion.h1>Hi, I'm Arik</motion.h1>
 				<hr></hr>
@@ -24,7 +25,6 @@ function Header() {
 					options={{ cursor: "_", loop: true }}
 					onInit={(typewriter) => {
 						typewriter
-							.pauseFor(1500)
 							.typeString("Front-end Web Developer")
 							.pauseFor(1500)
 							.deleteAll()
