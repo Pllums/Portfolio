@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import Projects3, { projects } from "./Projects";
 import { AnimatePresence, motion, useInView } from "framer-motion";
+import MyWorkHero from "./MyWorkHero";
 
 export default function MyWork() {
 	const [selectedId, setSelectedId] = useState(null);
@@ -8,36 +9,14 @@ export default function MyWork() {
 
 	const [isOpen, setIsOpen] = useState(false);
 	const myWorkRef = useRef(null);
-	// const mwHeroRef = useRef(null);
 	const isInView = useInView(myWorkRef, { once: true });
-	// const isInView2 = useInView(mwHeroRef, { once: true });
 
 	return (
 		<>
 			<div ref={myWorkRef} id="my-work" className="spacer purple-layer"></div>
 			<section className="my-work-section">
 				<div className="mw-content-wrapper">
-					{isInView && (
-						<motion.div
-							isInView={isInView}
-							className="mw-hero"
-							initial={{ opacity: 0, x: -2000 }}
-							animate={{ opacity: 1, x: 0 }}
-							transition={{ type: "spring", damping: 15, duration: 0.25 }}>
-							<h1>Completed Works</h1>
-							<motion.div
-								initial={{ opacity: 0 }}
-								animate={{ opacity: 1 }}
-								transition={{ delay: 0.75, duration: 0.5 }}
-								className="mw-hero-text">
-								<span>
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-									Laborum natus quaerat consectetur commodi perferendis aliquid
-									deserunt tempora repellendus, eligendi ullam incidunt quas.
-								</span>
-							</motion.div>
-						</motion.div>
-					)}
+					{isInView && <MyWorkHero isInView={isInView} />}
 					<div className="mw-contrast-stripe ">
 						<div className="project-grid">
 							<Projects3 />

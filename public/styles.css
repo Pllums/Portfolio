@@ -317,6 +317,13 @@ header i {
 	justify-content: center;
 }
 
+.clicked-card {
+	position: absolute;
+	width: 50rem;
+	height: 60rem;
+	background-color: #6b59e2;
+}
+
 @media (max-width: 1680px) {
 	.project-grid {
 		grid-template-columns: repeat(2, 1fr);

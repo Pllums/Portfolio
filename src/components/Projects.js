@@ -38,7 +38,6 @@ const projects = [
 ];
 
 // function Projects(projects) {
-
 // 	return (
 // 		<motion.div
 // 			layoutId={projects.id}
@@ -66,8 +65,11 @@ const projects = [
 // }
 
 // function CreateNewProject(project) {
+// 	const [isHovering, setIsHovering] = useState(false);
+
 // 	return (
 // 		<Projects
+// 			hover={() => setIsHovering(!isHovering)}
 // 			key={project.key}
 // 			title={project.title}
 // 			img={project.img}
@@ -135,11 +137,31 @@ function Projects2() {
 
 function Projects3() {
 	const [isHovering, setIsHovering] = useState(false);
-	const [selectedId, setSelectedId] = useState("");
+	const [selectedProject, setSelectedProject] = useState("");
+	const [selectedId, setSelectedId] = useState(-1);
+
+	function ClickedCard() {
+		{
+			selectedId != "" && (
+				<AnimatePresence>
+					<motion.div
+						className="clicked-card"
+						layoutId={selectedId}
+						initial={{ scale: 0, opacity: 0 }}
+						animate={{ scale: 1, opacity: 1 }}
+						transition={{ duration: 0.3 }}
+						exit={{ scale: 0, opacity: 0 }}>
+						<motion.h2>{selectedProject.title}</motion.h2>
+					</motion.div>
+				</AnimatePresence>
+			);
+		}
+	}
 	return (
 		<>
 			{projects.map((project) => (
 				<motion.div
+					key={project.key}
 					layoutId={project.title}
 					onMouseEnter={() => setIsHovering(!isHovering)}
 					onMouseLeave={() => setIsHovering(!isHovering)}
@@ -147,16 +169,24 @@ function Projects3() {
 					className="test-card">
 					<img src={project.img}></img>
 					{isHovering && (
-						<motion.div
-							className="hover-card"
-							onClick={() => setSelectedId(project)}>
-							<motion.h2
-								layout
-								initial={{ opacity: 0, y: 100 }}
-								animate={{ opacity: 1, y: 0 }}>
-								{project.title}
-							</motion.h2>
-						</motion.div>
+						<AnimatePresence>
+							<motion.div
+								className="hover-card"
+								onClick={() => [
+									setSelectedProject(project),
+									setSelectedId(selectedProject.id),
+								]}
+								layoutId={selectedId}>
+								<motion.h2
+									layout
+									initial={{ opacity: 0, y: 100 }}
+									animate={{ opacity: 1, y: 0 }}
+									exit={{ opacity: 0, y: 0 }}>
+									{project.title}
+								</motion.h2>
+								<motion.button></motion.button>
+							</motion.div>
+						</AnimatePresence>
 					)}
 				</motion.div>
 			))}
@@ -179,6 +209,14 @@ function Projects3() {
 		</>
 	);
 }
+
+// function HoverCard(props) {
+// 	const [isHoveringWhat, setIsHoveringWhat] = useState(null);
+
+// 	{
+// 		isHoveringWhat && console.log(isHoveringWhat);
+// 	}
+// }
 
 // export default CreateNewProject;
 export default Projects3;
