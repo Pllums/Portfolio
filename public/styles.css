@@ -188,12 +188,11 @@ header i {
 
 .about-me-text-wrapper {
 	border-radius: 10px;
-	width: clamp(350px, 75%, 800px);
-	height: 500px;
-	/* position: relative;
-	top: 50%;
-	transform: translateY(-50%); */
-	background: #000000a1;
+	box-shadow: 0 0 20px rgb(34, 0, 56);
+	width: clamp(550px, 75%, 800px);
+	height: fit-content;
+	margin-top: 1rem;
+	background: #0000007d;
 	padding: 2rem;
 }
 .about-me-text hr {
@@ -209,9 +208,11 @@ header i {
 	font-size: 1.2rem;
 }
 
-.about-tw-end {
+@media (max-width: 1920px) {
+	.img-fluid img {
+		scale: unset;
+	}
 }
-
 /* My work section styling */
 
 .my-work-section {
@@ -305,6 +306,12 @@ header i {
 .project-content {
 	padding: 0 5rem;
 	font-size: 1.4rem;
+}
+
+.animated-card {
+	position: absolute;
+	background-color: #fff;
+	color: #000;
 }
 
 .hover-card {

@@ -135,11 +135,30 @@ function Projects2() {
 
 function Projects3() {
 	const [isHovering, setIsHovering] = useState(false);
-	const [selectedId, setSelectedId] = useState("");
+	const [selectedId, setSelectedId] = useState(null);
+
+	function ClickedCard(props) {
+		return (
+			<>
+				<motion.div
+					className="animated-card"
+					layoutId={selectedId}
+					initial={{ opacity: 0, scale: 0 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5 }}
+					exit={{ opacity: 0, scale: 0 }}>
+					<motion.h1>{props.title}</motion.h1>
+					<button onClick={() => setSelectedId(null)}></button>
+				</motion.div>
+			</>
+		);
+	}
+
 	return (
 		<>
 			{projects.map((project) => (
 				<motion.div
+					key={project.key}
 					layoutId={project.title}
 					onMouseEnter={() => setIsHovering(!isHovering)}
 					onMouseLeave={() => setIsHovering(!isHovering)}
@@ -149,7 +168,8 @@ function Projects3() {
 					{isHovering && (
 						<motion.div
 							className="hover-card"
-							onClick={() => setSelectedId(project)}>
+							onClick={() => setSelectedId(project.id)}
+							layoutId={project.id}>
 							<motion.h2
 								layout
 								initial={{ opacity: 0, y: 100 }}
@@ -158,6 +178,9 @@ function Projects3() {
 							</motion.h2>
 						</motion.div>
 					)}
+					<AnimatePresence>
+						{selectedId && <ClickedCard title={project.title} />}
+					</AnimatePresence>
 				</motion.div>
 			))}
 			{/* {projects.map((project) => (
