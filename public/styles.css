@@ -188,12 +188,11 @@ header i {
 
 .about-me-text-wrapper {
 	border-radius: 10px;
-	width: clamp(350px, 75%, 800px);
-	height: 500px;
-	/* position: relative;
-	top: 50%;
-	transform: translateY(-50%); */
-	background: #000000a1;
+	box-shadow: 0 0 20px rgb(34, 0, 56);
+	width: clamp(550px, 75%, 800px);
+	/* height: fit-content; */
+	background: #0000007d;
+	margin-top: 2rem;
 	padding: 2rem;
 }
 .about-me-text hr {
@@ -210,6 +209,12 @@ header i {
 }
 
 .about-tw-end {
+}
+
+@media (max-width: 1920px) {
+	.img-fluid img {
+		scale: unset;
+	}
 }
 
 /* My work section styling */
@@ -307,8 +312,16 @@ header i {
 	font-size: 1.4rem;
 }
 
-.hover-card {
-	background-color: rgba(0, 0, 0, 0.295);
+.animated-card {
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	color: #000;
+}
+
+.hover-card-wrapper {
+	background-color: rgba(0, 0, 0, 0.603);
+	color: aliceblue;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -317,11 +330,36 @@ header i {
 	justify-content: center;
 }
 
-.clicked-card {
-	position: absolute;
-	width: 50rem;
-	height: 60rem;
-	background-color: #6b59e2;
+.hover-card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.hover-card h2 {
+	position: relative;
+	top: 3rem;
+	left: 3rem;
+	text-align: left;
+}
+
+.hover-card hr {
+	border: 1px solid aliceblue;
+	box-shadow: 5 5 100px white;
+	width: 40%;
+	position: relative;
+	top: 5rem;
+	left: 0;
+	transform: translateX(50%) translateY(-300%) rotate(-30deg);
+}
+
+.hover-card .project-content {
+	font-size: 1.3rem;
+	width: 40ch;
+	position: relative;
+	bottom: 3rem;
+	right: 3rem;
+	text-align: right;
 }
 
 @media (max-width: 1680px) {

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import { GetAge } from "./Date";
 
 export default function AboutMeText() {
 	const [twIsDone, setTwIsDone] = useState(false);
@@ -65,40 +64,66 @@ export default function AboutMeText() {
 					</span>
 				</motion.div>
 			</motion.div>
-			<motion.div
-				onClick={clickSet}
-				animate={{ opacity: twIsFinished ? 1 : 0 }}
-				className="about-me-text-wrapper">
-				<div className="about-me-text">
-					<h2>My Values</h2>
-					<div style={{ display: isClicked ? "none" : "inline" }}>
-						<ul>
-							<li>Integrity</li>
-							<li>Transparency</li>
-							<li>Authenticity</li>
-							<li>Dependability</li>
-						</ul>
+			<AnimatePresence>
+				<motion.div
+					onClick={clickSet}
+					animate={{ opacity: twIsFinished ? 1 : 0 }}
+					className="about-me-text-wrapper">
+					<div className="about-me-text">
+						<h2>My Values</h2>
+						<motion.div
+							layoutId="values"
+							initial={{
+								opacity: isClicked ? 0 : 1,
+								display: isClicked ? "none" : "inline-block",
+							}}
+							animate={{
+								opacity: isClicked ? 0 : 1,
+								display: isClicked ? "none" : "inline-block",
+							}}
+							exit={{
+								opacity: isClicked ? 1 : 0,
+								display: isClicked ? "inline-block" : "none",
+							}}>
+							<ul>
+								<li>Integrity</li>
+								<li>Transparency</li>
+								<li>Authenticity</li>
+								<li>Dependability</li>
+							</ul>
+						</motion.div>
+						<div>
+							{isClicked && (
+								<>
+									<motion.div
+										layoutId="values"
+										initial={{ opacity: 0, scale: 0 }}
+										animate={{
+											opacity: 1,
+											scale: 1,
+											transition: { duration: 0.5, type: "spring" },
+										}}
+										exit={{ opacity: 0, scale: 0 }}
+										transition={{ delay: 0.2, duration: 0.5 }}>
+										<span style={{ width: "10ch" }}>
+											At Diversity Today, we believe it's very easy to be a
+											HERO. All you need are:
+										</span>
+										<motion.ul
+											isClicked={isClicked}
+											animate={{ opacity: isClicked ? 1 : 0 }}>
+											<li>Honesty</li>
+											<li>Empathy</li>
+											<li>Respect</li>
+											<li>Open Mindedness</li>
+										</motion.ul>
+									</motion.div>
+								</>
+							)}
+						</div>
 					</div>
-					<div>
-						{isClicked && (
-							<>
-								<span style={{ width: "10ch" }}>
-									At Diversity Today, we believe it's very easy to be a HERO.
-									All you need are:
-								</span>
-								<motion.ul
-									isClicked={isClicked}
-									animate={{ opacity: isClicked ? 1 : 0 }}>
-									<li>Honesty</li>
-									<li>Empathy</li>
-									<li>Respect</li>
-									<li>Open Mindedness</li>
-								</motion.ul>
-							</>
-						)}
-					</div>
-				</div>
-			</motion.div>
+				</motion.div>
+			</AnimatePresence>
 		</>
 	);
 }

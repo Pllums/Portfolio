@@ -137,26 +137,25 @@ function Projects2() {
 
 function Projects3() {
 	const [isHovering, setIsHovering] = useState(false);
-	const [selectedProject, setSelectedProject] = useState("");
-	const [selectedId, setSelectedId] = useState(-1);
+	const [selectedId, setSelectedId] = useState(null);
 
-	function ClickedCard() {
-		{
-			selectedId != "" && (
-				<AnimatePresence>
-					<motion.div
-						className="clicked-card"
-						layoutId={selectedId}
-						initial={{ scale: 0, opacity: 0 }}
-						animate={{ scale: 1, opacity: 1 }}
-						transition={{ duration: 0.3 }}
-						exit={{ scale: 0, opacity: 0 }}>
-						<motion.h2>{selectedProject.title}</motion.h2>
-					</motion.div>
-				</AnimatePresence>
-			);
-		}
-	}
+	// function ClickedCard(props) {
+	// 	return (
+	// 		<>
+	// 			<motion.div
+	// 				className="animated-card"
+	// 				layoutId={selectedId}
+	// 				initial={{ opacity: 0, scale: 0 }}
+	// 				animate={{ opacity: 1, scale: 1 }}
+	// 				transition={{ duration: 0.5 }}
+	// 				exit={{ opacity: 0, scale: 0 }}>
+	// 				<motion.h1>{props.title}</motion.h1>
+	// 				<button onClick={() => setSelectedId(null)}></button>
+	// 			</motion.div>
+	// 		</>
+	// 	);
+	// }
+
 	return (
 		<>
 			{projects.map((project) => (
@@ -168,55 +167,82 @@ function Projects3() {
 					style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px #000" }}
 					className="test-card">
 					<img src={project.img}></img>
-					{isHovering && (
-						<AnimatePresence>
+					<AnimatePresence>
+						{isHovering && (
 							<motion.div
-								className="hover-card"
-								onClick={() => [
-									setSelectedProject(project),
-									setSelectedId(selectedProject.id),
-								]}
-								layoutId={selectedId}>
-								<motion.h2
+								className="hover-card-wrapper"
+								onClick={() => setSelectedId(project.id)}
+								layoutId={project.id}>
+								<motion.div
+									className="hover-card"
 									layout
 									initial={{ opacity: 0, y: 100 }}
-									animate={{ opacity: 1, y: 0 }}
-									exit={{ opacity: 0, y: 0 }}>
-									{project.title}
-								</motion.h2>
-								<motion.button></motion.button>
+									animate={{
+										opacity: 1,
+										y: 0,
+										transition: "spring",
+									}}
+									exit={{ opacity: 0, transition: { delay: 0.2 } }}>
+									<motion.div
+										initial={{ opacity: 0, x: 50 }}
+										animate={{
+											opacity: 1,
+											x: "-1rem",
+											transition: { delay: 0.3, duration: 0.5 },
+										}}>
+										<motion.h2>{project.title}</motion.h2>
+									</motion.div>
+
+									<motion.div
+										initial={{ opacity: 0, x: "-4rem", y: 200, rotate: "deg" }}
+										animate={{
+											opacity: 1,
+											y: 0,
+											rotate: "-20deg",
+											transition: { duration: 0.3 },
+										}}>
+										<motion.hr />
+									</motion.div>
+									<motion.div
+										className="project-content"
+										initial={{ opacity: 0, x: 50 }}
+										animate={{
+											opacity: 1,
+											x: "23rem",
+											transition: { delay: 0.3, duration: 0.5 },
+										}}>
+										<motion.span>{project.content}</motion.span>
+									</motion.div>
+									<motion.div>
+										<motion.p className="project-tech">
+											Technologies Used: {projects.tech}.
+										</motion.p>
+										<motion.span>
+											<a
+												href={project.codeURL}
+												rel="noreferrer"
+												target="_blank">
+												View the Code
+											</a>
+										</motion.span>
+										<motion.span>
+											<a href={project.site} rel="noreferrer" target="_blank">
+												See it in action
+											</a>
+										</motion.span>
+									</motion.div>
+								</motion.div>
 							</motion.div>
-						</AnimatePresence>
-					)}
+						)}
+					</AnimatePresence>
 				</motion.div>
 			))}
-			{/* {projects.map((project) => (
-				<AnimatePresence>
-					{selectedId && (
-						<motion.div
-							onClick={() => setSelectedId(null)}
-							layoutId={selectedId}
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							exit={{ opacity: 0, transition: { duration: 0.15 } }}
-							transition={{ duration: 0.15, delay: 0.15 }}
-							className="overlay">
-							<motion.h1>{project.title}</motion.h1>
-						</motion.div>
-					)}
-				</AnimatePresence>
-			))} */}
+			{/* <AnimatePresence>
+				{selectedId && <ClickedCard title="Test" />}
+			</AnimatePresence> */}
 		</>
 	);
 }
-
-// function HoverCard(props) {
-// 	const [isHoveringWhat, setIsHoveringWhat] = useState(null);
-
-// 	{
-// 		isHoveringWhat && console.log(isHoveringWhat);
-// 	}
-// }
 
 // export default CreateNewProject;
 export default Projects3;
