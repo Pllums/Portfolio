@@ -226,6 +226,7 @@ header i {
 }
 
 .mw-content-wrapper {
+	transform: translateY(-10rem);
 	margin: auto;
 	max-width: 2560px;
 	min-height: 100vh;
@@ -307,11 +308,6 @@ header i {
 	margin: 0.5rem;
 }
 
-/* .project-content {
-	padding: 0 5rem;
-	font-size: 1.4rem;
-} */
-
 .animated-card {
 	background-color: #fff;
 	width: 100%;
@@ -320,7 +316,7 @@ header i {
 }
 
 .hover-card-wrapper {
-	background-color: rgba(0, 0, 0, 0.603);
+	background-color: rgba(0, 0, 0, 0.705);
 	color: aliceblue;
 	width: 100%;
 	height: 100%;
@@ -355,7 +351,7 @@ header i {
 
 .hover-card .project-content {
 	font-size: 1.3rem;
-	width: 40ch;
+	width: 30ch;
 	position: relative;
 	bottom: 3rem;
 	right: 3rem;
@@ -375,6 +371,35 @@ header i {
 .hover-card-tech .project-tech a {
 	color: #6b59e2;
 }
+
+@media (max-width: 3440px) {
+	.mw-hero {
+		margin-bottom: 3rem;
+	}
+	.hover-card .project-content {
+		font-size: 1.2rem;
+		width: 30ch;
+		right: -5rem;
+	}
+}
+
+@media (max-width: 1920px) {
+	.mw-hero {
+		margin-bottom: 3rem;
+	}
+	.hover-card h2 {
+		font-size: 1.8rem;
+	}
+	.hover-card hr {
+		top: 4rem;
+	}
+	.hover-card .project-content {
+		font-size: 1.1rem;
+		width: 30ch;
+		right: 5.5rem;
+	}
+}
+
 @media (max-width: 1680px) {
 	.project-grid {
 		grid-template-columns: repeat(2, 1fr);

@@ -30,7 +30,7 @@ const projects = [
 		title: "WarServeR",
 		img: "./images/Warserver.png",
 		content:
-			"I made this site as a refresh for a client who wanted a retro feel for his Quake 3 Arena page. The original site was faiyl slow, so I built this with React to give it modularity and the snappy feel we all want as.",
+			"I made this site as a refresh for a client who wanted a retro feel for his Quake 3 Arena page. The original site was fairly slow, so I built this with React to give it modularity and the snappy feel we all want as.",
 		tech: "ReactJs, CSS",
 		codeURL: "https://github.com/Pllums/WarServeR-Redesign",
 		site: "https://warserver-redesign.vercel.app/",
