@@ -8,7 +8,7 @@ const projects = [
 		title: "Squash-It",
 		img: "./images/Squash-it.png",
 		content:
-			"Squash-It is a mock bug submit and tracking site where users can register as employees and are then able to work assign themselves a bug, list any work they have done to correct the fake bugs and any user can submit a bug without logging in.",
+			"Squash-It is a mock bug submit and tracking site where users can register as employees and are then able to assign themselves a bug, list any work they have done and any user can submit a bug without logging in.",
 		tech: "EJS, Node.js, HTML, CSS, MongoDB",
 		codeURL: "https://github.com/Pllums/Bug-Tracker",
 		site: "",
@@ -194,7 +194,7 @@ function Projects3() {
 									</motion.div>
 
 									<motion.div
-										initial={{ opacity: 0, x: "-4rem", y: 200, rotate: "deg" }}
+										initial={{ opacity: 0, x: "-4rem", y: 200, rotate: "0deg" }}
 										animate={{
 											opacity: 1,
 											y: 0,
@@ -213,7 +213,13 @@ function Projects3() {
 										}}>
 										<motion.span>{project.content}</motion.span>
 									</motion.div>
-									<motion.div>
+									<motion.div
+										initial={{ opacity: 0 }}
+										animate={{
+											opacity: 1,
+											transition: { delay: 0.75, duration: 0.75 },
+										}}
+										className="hover-card-tech">
 										<motion.p className="project-tech">
 											Technologies Used: {projects.tech}.
 										</motion.p>
@@ -224,7 +230,7 @@ function Projects3() {
 												target="_blank">
 												View the Code
 											</a>
-										</motion.span>
+										</motion.span>{" "}
 										<motion.span>
 											<a href={project.site} rel="noreferrer" target="_blank">
 												See it in action
@@ -237,9 +243,6 @@ function Projects3() {
 					</AnimatePresence>
 				</motion.div>
 			))}
-			{/* <AnimatePresence>
-				{selectedId && <ClickedCard title="Test" />}
-			</AnimatePresence> */}
 		</>
 	);
 }

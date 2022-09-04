@@ -307,10 +307,10 @@ header i {
 	margin: 0.5rem;
 }
 
-.project-content {
+/* .project-content {
 	padding: 0 5rem;
 	font-size: 1.4rem;
-}
+} */
 
 .animated-card {
 	background-color: #fff;
@@ -362,9 +362,26 @@ header i {
 	text-align: right;
 }
 
+.hover-card-tech {
+	position: absolute;
+	bottom: 0;
+	right: 0.7rem;
+	margin-top: 1.3rem;
+}
+.hover-card-tech .project-tech {
+	margin-bottom: -0.4rem;
+}
+
+.hover-card-tech .project-tech a {
+	color: #6b59e2;
+}
 @media (max-width: 1680px) {
 	.project-grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.hover-card .project-content {
+		font-size: 1.1rem;
+		width: 30ch;
 	}
 }
 
