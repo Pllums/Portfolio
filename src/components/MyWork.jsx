@@ -16,7 +16,7 @@ export default function MyWork() {
 			<section className="my-work-section">
 				<div className="mw-content-wrapper">
 					{isInView && <MyWorkHero isInView={isInView} />}
-					<div className="mw-contrast-stripe ">
+					<div className="mw-contrast-stripe">
 						<div className="project-grid">
 							{projects.map((project) => (
 								<ProjectCard

@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Typewriter from "typewriter-effect";
 
 import AboutMeText from "./AboutMeText";
 
@@ -10,7 +9,7 @@ function AboutMe() {
 
 	return (
 		<>
-			<section className="about-me-background">
+			<section id="about-me" className="about-me-background">
 				<div className="purple-triangle">
 					<svg
 						data-name="Layer 1"
@@ -23,11 +22,11 @@ function AboutMe() {
 					</svg>
 				</div>
 				<div className="about-me-wrapper row">
-					<div ref={aboutMeRef} className="col-md-4 m-auto">
+					<div ref={aboutMeRef} className="col-md-6 m-auto">
 						{isInView && <AboutMeText isInView={isInView} />}
 					</div>
 
-					<div className="img-fluid col-md-4 mx-auto ">
+					<div className="img-fluid col-md-6 mx-auto order-first">
 						<img className="img-fluid" src="./images/Arik.jpg"></img>
 					</div>
 				</div>

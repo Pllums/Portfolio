@@ -69,6 +69,10 @@ body {
 	background-size: cover;
 }
 
+.stacked-peaks {
+	background-image: url(./images/svgs/stacked-peaks-haikei.svg);
+}
+
 /* CSS only paralax scroll */
 
 .wrapper {
@@ -189,11 +193,12 @@ header i {
 .about-me-text-wrapper {
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgb(34, 0, 56);
-	width: clamp(550px, 75%, 800px);
+	width: clamp(450px, 75%, 800px);
 	/* height: fit-content; */
 	background: #0000007d;
-	margin-top: 2rem;
+	margin: 2rem auto;
 	padding: 2rem;
+	z-index: 100;
 }
 .about-me-text hr {
 	margin: 1rem auto;
@@ -208,21 +213,31 @@ header i {
 	font-size: 1.2rem;
 }
 
-.about-tw-end {
-}
-
 @media (max-width: 1920px) {
 	.img-fluid img {
 		scale: unset;
 	}
 }
 
+@media (max-width: 576px) {
+	.about-me-background {
+		padding: unset;
+	}
+	.about-me-text-wrapper {
+		position: relative;
+	}
+	.img-fluid img {
+		border-radius: 50%;
+		scale: 0.5;
+	}
+}
 /* My work section styling */
 
 .my-work-section {
 	min-height: 100vh;
 	/* background-color: #001220; */
-	background: linear-gradient(to bottom, #001220, #001f36);
+	/* background: linear-gradient(to bottom, #001220, #001f36); */
+	background-image: url(./images//svgs/stacked-peaks-haikei.svg);
 }
 
 .mw-content-wrapper {
@@ -237,6 +252,7 @@ header i {
 	transform: translateY(-20rem);
 	color: aliceblue;
 	margin-left: 2rem;
+	margin-bottom: 10rem;
 }
 .mw-hero h1 {
 	font-size: 4rem;
@@ -264,7 +280,7 @@ header i {
 }
 @media (max-width: 1920px) {
 	.mw-contrast-stripe {
-		padding-top: 5rem;
+		padding-top: 0rem;
 	}
 }
 
@@ -273,8 +289,9 @@ header i {
 .project-grid {
 	display: grid;
 	gap: 1.5rem;
-	margin: auto;
-	padding: 0 1.5rem;
+	/* margin: auto; */
+	margin: 10rem auto;
+	padding: 0 2rem;
 	grid-template-columns: repeat(3, 1fr);
 	position: relative;
 	top: -1rem;
@@ -317,6 +334,7 @@ header i {
 
 .hover-card-wrapper {
 	background-color: rgba(0, 0, 0, 0.705);
+	border-radius: 1rem;
 	color: aliceblue;
 	width: 100%;
 	height: 100%;
@@ -423,6 +441,7 @@ header i {
 	align-items: center;
 	justify-content: center;
 	margin: auto;
+
 	position: relative;
 	/* padding: 3rem 5rem; */
 	width: fit-content;
