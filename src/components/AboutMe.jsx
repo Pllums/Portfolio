@@ -26,7 +26,7 @@ function AboutMe() {
 						{isInView && <AboutMeText isInView={isInView} />}
 					</div>
 
-					<div className="img-fluid col-md-6 mx-auto order-first">
+					<div className="img-wrapper col-md-6 mx-auto order-first">
 						<img className="img-fluid" src="./images/Arik.jpg"></img>
 					</div>
 				</div>

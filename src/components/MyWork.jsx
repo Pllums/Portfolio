@@ -3,9 +3,15 @@ import { projects } from "./Projects";
 import ProjectCard from "./project-cards/ProjectCard";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import MyWorkHero from "./MyWorkHero";
+import ClickedCard from "./project-cards/ClickedCard";
 
 export default function MyWork() {
-	const [selectedId, setSelectedId] = useState(null);
+	const [selectedId, setSelectedId] = useState(-1);
+
+	const handleClick = (id) => {
+		setSelectedId(id);
+		console.log("changed");
+	};
 
 	const myWorkRef = useRef(null);
 	const isInView = useInView(myWorkRef, { once: true });
@@ -21,6 +27,7 @@ export default function MyWork() {
 							{projects.map((project) => (
 								<ProjectCard
 									key={project.key}
+									handleClick={handleClick}
 									img={project.img}
 									id={project.id}
 									title={project.title}
@@ -31,6 +38,7 @@ export default function MyWork() {
 								/>
 							))}
 						</div>
+						{selectedId != -1 && <ClickedCard layoutId={selectedId} />}
 					</div>
 				</div>
 			</section>

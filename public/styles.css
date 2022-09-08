@@ -169,7 +169,7 @@ header i {
 .about-me-wrapper {
 	margin: 0 auto;
 	max-width: 2560px;
-	height: 1300px;
+	min-height: 100vh;
 }
 
 .img-fluid {
@@ -177,7 +177,7 @@ header i {
 	margin: auto;
 }
 
-.img-fluid img {
+.img-wrapper img {
 	/* position: relative;
 	top: 50%;
 	left: 50%;
@@ -198,7 +198,8 @@ header i {
 	background: #0000007d;
 	margin: 2rem auto;
 	padding: 2rem;
-	z-index: 100;
+	position: relative;
+	z-index: 2;
 }
 .about-me-text hr {
 	margin: 1rem auto;
@@ -226,7 +227,9 @@ header i {
 	.about-me-text-wrapper {
 		position: relative;
 	}
-	.img-fluid img {
+	.img-wrapper img {
+		position: relative;
+		margin-bottom: -10rem;
 		border-radius: 50%;
 		scale: 0.5;
 	}
