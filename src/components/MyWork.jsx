@@ -6,12 +6,12 @@ import MyWorkHero from "./MyWorkHero";
 import ClickedCard from "./project-cards/ClickedCard";
 
 export default function MyWork() {
-	const [selectedId, setSelectedId] = useState(-1);
+	// const [selectedId, setSelectedId] = useState(-1);
 
-	const handleClick = (id) => {
-		setSelectedId(id);
-		console.log("changed");
-	};
+	// const handleClick = (id) => {
+	// 	setSelectedId(id);
+	// 	console.log("changed");
+	// };
 
 	const myWorkRef = useRef(null);
 	const isInView = useInView(myWorkRef, { once: true });
@@ -22,12 +22,14 @@ export default function MyWork() {
 			<section className="my-work-section">
 				<div className="mw-content-wrapper">
 					{isInView && <MyWorkHero isInView={isInView} />}
-					<div className="mw-contrast-stripe">
-						<div className="project-grid">
+					{/* <div className="mw-contrast-stripe"> */}
+					{/* <div className="project-grid"> */}
+					<div className="container-fluid">
+						<div className="row">
 							{projects.map((project) => (
 								<ProjectCard
 									key={project.key}
-									handleClick={handleClick}
+									// handleClick={handleClick}
 									img={project.img}
 									id={project.id}
 									title={project.title}
@@ -38,9 +40,11 @@ export default function MyWork() {
 								/>
 							))}
 						</div>
-						{selectedId != -1 && <ClickedCard layoutId={selectedId} />}
 					</div>
 				</div>
+				{/* {selectedId != -1 && <ClickedCard layoutId={selectedId} />} */}
+				{/* </div> */}
+				{/* </div> */}
 			</section>
 		</>
 	);

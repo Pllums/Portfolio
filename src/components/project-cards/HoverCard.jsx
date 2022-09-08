@@ -9,7 +9,7 @@ export default function HoverCard(props) {
 		<>
 			<motion.div
 				className="hover-card-wrapper"
-				onClick={() => setSelectedId(props.id)}
+				// onClick={() => setSelectedId(props.id)}
 				layoutId={props.id}>
 				<motion.div
 					className="hover-card"
@@ -20,13 +20,18 @@ export default function HoverCard(props) {
 						y: 0,
 						transition: "spring",
 					}}
-					exit={{ opacity: 0, transition: { delay: 0.2 } }}>
+					exit={{ opacity: 0, transition: { delay: 0.75 } }}>
 					<motion.div
 						initial={{ opacity: 0, x: 50 }}
 						animate={{
 							opacity: 1,
 							x: "-1rem",
 							transition: { delay: 0.3, duration: 0.5 },
+						}}
+						exit={{
+							opacity: 0,
+							x: 50,
+							transition: { delay: 0.3, duration: 0.5, ease: "easeOut" },
 						}}>
 						<motion.h2>{props.title}</motion.h2>
 					</motion.div>
@@ -38,6 +43,13 @@ export default function HoverCard(props) {
 							y: 0,
 							rotate: "-20deg",
 							transition: { duration: 0.3 },
+						}}
+						exit={{
+							opacity: 0,
+							x: "-4rem",
+							y: 200,
+							rotate: "0deg",
+							transition: { delay: 0.8, duration: 0.03 },
 						}}>
 						<motion.hr />
 					</motion.div>
@@ -48,6 +60,11 @@ export default function HoverCard(props) {
 							opacity: 1,
 							x: "23rem",
 							transition: { delay: 0.3, duration: 0.5 },
+						}}
+						exit={{
+							opacity: 0,
+							x: 50,
+							transition: { delay: 0.3, duration: 0.5 },
 						}}>
 						<motion.span>{props.content}</motion.span>
 					</motion.div>
@@ -57,6 +74,7 @@ export default function HoverCard(props) {
 							opacity: 1,
 							transition: { delay: 0.75, duration: 0.75 },
 						}}
+						exit={{ opacity: 0, transition: { duration: 0.25 } }}
 						className="hover-card-tech">
 						<motion.p className="project-tech">
 							Technologies Used: {props.tech}.

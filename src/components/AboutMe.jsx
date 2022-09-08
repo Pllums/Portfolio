@@ -21,13 +21,15 @@ function AboutMe() {
 							className="shape-fill"></path>
 					</svg>
 				</div>
-				<div className="about-me-wrapper row">
-					<div ref={aboutMeRef} className="col-md-6 m-auto">
-						{isInView && <AboutMeText isInView={isInView} />}
-					</div>
+				<div className="about-me-wrapper">
+					<div className="row">
+						<div ref={aboutMeRef} className="col-md-6 mx-auto">
+							{isInView && <AboutMeText isInView={isInView} />}
+						</div>
 
-					<div className="img-wrapper col-md-6 mx-auto order-first">
-						<img className="img-fluid" src="./images/Arik.jpg"></img>
+						<div className="img-wrapper col-md-6 mx-auto order-first">
+							<img className="img-fluid" src="./images/Arik.jpg"></img>
+						</div>
 					</div>
 				</div>
 				<div className="blue-wave">

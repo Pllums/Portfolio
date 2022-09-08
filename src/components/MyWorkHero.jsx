@@ -15,9 +15,12 @@ export default function MyWorkHero() {
 				transition={{ delay: 0.75, duration: 0.5 }}
 				className="mw-hero-text">
 				<span>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
-					natus quaerat consectetur commodi perferendis aliquid deserunt tempora
-					repellendus, eligendi ullam incidunt quas.
+					I have listed out my finished projects below. Some of them I made for
+					myself, whereas others I was asked to build something for someone
+					else.{" "}
+					<span className="hover-click-text">
+						Hover on the project to learn more.
+					</span>
 				</span>
 			</motion.div>
 		</motion.div>

@@ -214,13 +214,13 @@ header i {
 	font-size: 1.2rem;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1919.98px) {
 	.img-fluid img {
 		scale: unset;
 	}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 577px) {
 	.about-me-background {
 		padding: unset;
 	}
@@ -276,12 +276,12 @@ header i {
 	bottom: 40%;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 191.98px) {
 	.mw-hero {
 		transform: translateY(-10rem);
 	}
 }
-@media (max-width: 1920px) {
+@media (max-width: 1919.98px) {
 	.mw-contrast-stripe {
 		padding-top: 0rem;
 	}
@@ -393,7 +393,7 @@ header i {
 	color: #6b59e2;
 }
 
-@media (max-width: 3440px) {
+@media (max-width: 3439.98px) {
 	.mw-hero {
 		margin-bottom: 3rem;
 	}
@@ -404,7 +404,7 @@ header i {
 	}
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1919.98px) {
 	.mw-hero {
 		margin-bottom: 3rem;
 	}
@@ -421,13 +421,20 @@ header i {
 	}
 }
 
-@media (max-width: 1680px) {
+@media (min-width: 578px) and (max-width: 1681px) {
 	.project-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.hover-card .project-content {
 		font-size: 1.1rem;
 		width: 30ch;
+		right: -1.5rem;
+	}
+}
+
+@media (max-width: 577px) {
+	.project-grid {
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
 
