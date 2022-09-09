@@ -9,7 +9,7 @@ export default function Header() {
 			<img className="background" src="./images/HeaderBackground.png"></img>
 			<motion.div className="title">
 				<GetDate />
-				<motion.h1>Hi, I'm Arik</motion.h1>
+				<h1>Hi, I'm Arik</h1>
 				<hr></hr>
 				<Typewriter
 					options={{ cursor: "_", loop: true }}

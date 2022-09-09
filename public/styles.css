@@ -100,7 +100,8 @@ header {
 }
 
 header i {
-	transform: scale(3);
+	scale: 3;
+	translate: 0 -3rem;
 }
 
 .background {
@@ -214,13 +215,7 @@ header i {
 	font-size: 1.2rem;
 }
 
-@media (max-width: 1919.98px) {
-	.img-fluid img {
-		scale: unset;
-	}
-}
-
-@media (max-width: 577px) {
+@media (max-width: 821px) {
 	.about-me-background {
 		padding: unset;
 	}
@@ -274,17 +269,6 @@ header i {
 	width: 100%;
 	position: absolute;
 	bottom: 40%;
-}
-
-@media (max-width: 191.98px) {
-	.mw-hero {
-		transform: translateY(-10rem);
-	}
-}
-@media (max-width: 1919.98px) {
-	.mw-contrast-stripe {
-		padding-top: 0rem;
-	}
 }
 
 /* Projects Styling */
@@ -393,7 +377,7 @@ header i {
 	color: #6b59e2;
 }
 
-@media (max-width: 3439.98px) {
+@media (max-width: 3441px) {
 	.mw-hero {
 		margin-bottom: 3rem;
 	}
@@ -404,9 +388,10 @@ header i {
 	}
 }
 
-@media (max-width: 1919.98px) {
+@media (max-width: 1921px) {
 	.mw-hero {
 		margin-bottom: 3rem;
+		transform: translateY(-10rem);
 	}
 	.hover-card h2 {
 		font-size: 1.8rem;
@@ -418,6 +403,12 @@ header i {
 		font-size: 1.1rem;
 		width: 30ch;
 		right: 5.5rem;
+	}
+	.img-fluid img {
+		scale: unset;
+	}
+	.mw-contrast-stripe {
+		padding-top: 0rem;
 	}
 }
 
@@ -433,8 +424,8 @@ header i {
 }
 
 @media (max-width: 577px) {
-	.project-grid {
-		grid-template-columns: repeat(4, 1fr);
+	.title h1 {
+		font-size: 3rem;
 	}
 }
 

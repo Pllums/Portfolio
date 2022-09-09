@@ -6,7 +6,7 @@ export default function ProjectCard(props) {
 	const [isHovering, setIsHovering] = useState(false);
 
 	return (
-		<div className="col-md-4">
+		<div className="col-lg-4 col-md-6">
 			<motion.div
 				key={props.id}
 				layoutId={props.title}

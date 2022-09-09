@@ -23,11 +23,11 @@ function AboutMe() {
 				</div>
 				<div className="about-me-wrapper">
 					<div className="row">
-						<div ref={aboutMeRef} className="col-md-6 mx-auto">
+						<div ref={aboutMeRef} className="col-lg-6 mx-auto">
 							{isInView && <AboutMeText isInView={isInView} />}
 						</div>
 
-						<div className="img-wrapper col-md-6 mx-auto order-first">
+						<div className="img-wrapper col-lg-6 mx-auto order-first">
 							<img className="img-fluid" src="./images/Arik.jpg"></img>
 						</div>
 					</div>

@@ -4,6 +4,7 @@ import ProjectCard from "./project-cards/ProjectCard";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import MyWorkHero from "./MyWorkHero";
 import ClickedCard from "./project-cards/ClickedCard";
+import ContactMe from "./Contact";
 
 export default function MyWork() {
 	// const [selectedId, setSelectedId] = useState(-1);
@@ -23,7 +24,7 @@ export default function MyWork() {
 				<div className="mw-content-wrapper">
 					{isInView && <MyWorkHero isInView={isInView} />}
 					{/* <div className="mw-contrast-stripe"> */}
-					{/* <div className="project-grid"> */}
+
 					<div className="container-fluid">
 						<div className="row">
 							{projects.map((project) => (
@@ -42,6 +43,7 @@ export default function MyWork() {
 						</div>
 					</div>
 				</div>
+				<ContactMe email="arikabdullah1122@gmail.com" discord="" />
 				{/* {selectedId != -1 && <ClickedCard layoutId={selectedId} />} */}
 				{/* </div> */}
 				{/* </div> */}
