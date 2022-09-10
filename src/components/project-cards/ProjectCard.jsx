@@ -10,12 +10,13 @@ export default function ProjectCard(props) {
 			<motion.div
 				key={props.id}
 				layoutId={props.title}
+				onClick={props.handleClick}
 				onMouseEnter={() => setIsHovering(!isHovering)}
 				onMouseLeave={() => setIsHovering(!isHovering)}
 				style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px #000" }}
 				className="test-card">
 				<img src={props.img}></img>
-				<AnimatePresence>
+				{/* <AnimatePresence>
 					{isHovering && (
 						<HoverCard
 							id={props.id}
@@ -26,7 +27,7 @@ export default function ProjectCard(props) {
 							site={props.site}
 						/>
 					)}
-				</AnimatePresence>
+				</AnimatePresence> */}
 			</motion.div>
 		</div>
 	);

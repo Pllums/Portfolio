@@ -7,7 +7,14 @@ import ClickedCard from "./project-cards/ClickedCard";
 import ContactMe from "./Contact";
 
 export default function MyWork() {
-	// const [selectedId, setSelectedId] = useState(-1);
+	const [selectedProject, setSelectedProject] = useState({ id: -1 });
+
+	const handleClick = ({ project }) => {
+		setSelectedProject((prevState) => {
+			return { ...prevState, ...project };
+		});
+		console.log(selectedProject.title);
+	};
 
 	// const handleClick = (id) => {
 	// 	setSelectedId(id);
@@ -30,7 +37,9 @@ export default function MyWork() {
 							{projects.map((project) => (
 								<ProjectCard
 									key={project.key}
-									// handleClick={handleClick}
+									handleClick={() => {
+										handleClick({ project });
+									}}
 									img={project.img}
 									id={project.id}
 									title={project.title}
@@ -41,10 +50,12 @@ export default function MyWork() {
 								/>
 							))}
 						</div>
+						{selectedProject.id != -1 && (
+							<ClickedCard selectedProject={selectedProject} />
+						)}
 					</div>
 				</div>
 				<ContactMe email="arikabdullah1122@gmail.com" discord="" />
-				{/* {selectedId != -1 && <ClickedCard layoutId={selectedId} />} */}
 				{/* </div> */}
 				{/* </div> */}
 			</section>
