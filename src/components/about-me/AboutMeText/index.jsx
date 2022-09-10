@@ -45,7 +45,30 @@ export default function AboutMeText() {
 					</span>
 					<span className="about-tw-end">
 						{twIsDone && (
-							<Typewriter
+							<motion.div
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								transition={{ duration: 0.5, ease: "easeOut" }}>
+								<p>
+									Hey there, it's nice to meet you. Arik Abdullah is more than
+									just a name on this website. I am married to the most amazing
+									woman and the father of two magnificent children. For the
+									first nine years of my professional career I was a fulltime
+									firefighter and have been blessed to make an impact on alot of
+									people. However, now I am looking to make an impact for myself
+									and my family by working with something I enjoy that allows me
+									to be the best version of myself for those I love. In my
+									downtime (usually once everyone else is sleeping) you can
+									almost always find me in front of my computer trying to learn
+									something new, playing a game or reading comic books. On the
+									nicer days I love to get out on my motorcycle or bring the
+									whole family out on our boat. Oh and I have spent entirely too
+									many hours of my life watching the Office! Ok, that last line
+									is a lie... You can't watch the Office too much.
+								</p>
+							</motion.div>
+
+							/* <Typewriter
 								twIsDone={twIsDone}
 								options={{
 									cursor: "_",
@@ -59,17 +82,18 @@ export default function AboutMeText() {
 										.start()
 										.callFunction(isFinished);
 								}}
-							/>
+							/> */
 						)}
 					</span>
 				</motion.div>
 			</motion.div>
 			<AnimatePresence>
-				{twIsFinished && (
+				{twIsDone && (
 					<motion.div
 						onClick={clickSet}
 						initial={{ opacity: 0 }}
-						animate={{ opacity: 1, transition: { duration: 0.3 } }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 0.5, ease: "easeOut" }}
 						className="about-me-text-wrapper">
 						<div className="about-me-text">
 							<h2>My Values</h2>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import HoverCard from "./HoverCard";
+import HoverCard from "../HoverCard";
 
 export default function ProjectCard(props) {
 	const [isHovering, setIsHovering] = useState(false);

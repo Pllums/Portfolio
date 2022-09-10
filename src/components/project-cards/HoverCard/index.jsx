@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import ClickedCard from "./ClickedCard";
+import ClickedCard from "../ClickedCard";
 
 export default function HoverCard(props) {
 	const [selectedId, setSelectedId] = useState(-1);

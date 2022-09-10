@@ -1,5 +1,5 @@
-import { projects } from "../Projects";
-import ProjectCard from "./ProjectCard";
+import { projects } from "../../Projects";
+import ProjectCard from "../ProjectCard";
 
 export default function ProjectList({ selectedId }) {
 	return (

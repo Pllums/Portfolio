@@ -1,7 +1,7 @@
 import React from "react";
-import Nav from "../src/components/Nav";
-import Header from "../src/components/Header";
-import MyWork from "../src/components/MyWork";
+import Nav from "./components/header-nav/Nav";
+import Header from "./components/header-nav/Header";
+import MyWork from "./components/MyWork";
 import AboutMe from "./components/AboutMe";
 
 export default function Site() {

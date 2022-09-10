@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { projects } from "./Projects";
 import ProjectCard from "./project-cards/ProjectCard";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import MyWorkHero from "./MyWorkHero";
+import MyWorkHero from "./my-work/MyWorkHero";
 import ClickedCard from "./project-cards/ClickedCard";
 import ContactMe from "./Contact";
 

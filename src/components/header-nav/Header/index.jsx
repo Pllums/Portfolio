@@ -1,5 +1,5 @@
 import React from "react";
-import GetDate from "./Date";
+import GetDate from "../Date";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 

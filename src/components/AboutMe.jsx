@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
-import AboutMeText from "./AboutMeText";
+import AboutMeText from "./about-me/AboutMeText";
 
 function AboutMe() {
 	const aboutMeRef = useRef(null);
