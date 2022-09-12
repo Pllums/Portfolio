@@ -22,7 +22,7 @@ function AboutMe() {
 				</div>
 				<div className="about-me-wrapper">
 					<div className="row">
-						<div ref={aboutMeRef} className="col-lg-6 mx-auto">
+						<div ref={aboutMeRef} className="col-lg-6 m-auto">
 							{isInView && <AboutMeText isInView={isInView} />}
 						</div>
 

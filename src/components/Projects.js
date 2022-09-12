@@ -13,17 +13,6 @@ export const projects = [
 	{
 		id: 1,
 		key: 1,
-		title: "Boudoir X Alyssa",
-		img: "./images/BoudoirXAlyssa.png",
-		content:
-			"This is a site I made for my wife's photography business. The site features a rich landing page, portfolio pages and contact page.",
-		tech: "HTML, CSS, JavaScript, Node.js",
-		codeURL: "https://github.com/Pllums/Boudoir-X-Alyssa",
-		site: "",
-	},
-	{
-		id: 2,
-		key: 2,
 		title: "WarServeR",
 		img: "./images/Warserver.png",
 		content:
@@ -31,5 +20,16 @@ export const projects = [
 		tech: "ReactJs, CSS",
 		codeURL: "https://github.com/Pllums/WarServeR-Redesign",
 		site: "https://warserver-redesign.vercel.app/",
+	},
+	{
+		id: 2,
+		key: 2,
+		title: "Boudoir X Alyssa",
+		img: "./images/BoudoirXAlyssa.png",
+		content:
+			"This is a site I made for my wife's photography business. The site features a rich landing page, portfolio pages and contact page.",
+		tech: "HTML, CSS, JavaScript, Node.js",
+		codeURL: "https://github.com/Pllums/Boudoir-X-Alyssa",
+		site: "",
 	},
 ];

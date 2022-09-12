@@ -16,6 +16,9 @@ export default function MyWork() {
 		console.log(selectedProject.title);
 	};
 
+	const handleClose = () => {
+		setSelectedProject({ id: -1 });
+	};
 	// const handleClick = (id) => {
 	// 	setSelectedId(id);
 	// 	console.log("changed");
@@ -50,11 +53,16 @@ export default function MyWork() {
 								/>
 							))}
 						</div>
-						{selectedProject.id != -1 && (
-							<ClickedCard selectedProject={selectedProject} />
-						)}
 					</div>
+
+					{selectedProject.id != -1 && (
+						<ClickedCard
+							selectedProject={selectedProject}
+							handleClose={handleClose}
+						/>
+					)}
 				</div>
+
 				<ContactMe email="arikabdullah1122@gmail.com" discord="" />
 				{/* </div> */}
 				{/* </div> */}
