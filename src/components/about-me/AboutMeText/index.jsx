@@ -6,8 +6,8 @@ export default function AboutMeText() {
 	const [twIsDone, setTwIsDone] = useState(false);
 	const isSet = () => setTwIsDone(true);
 
-	const [twIsFinished, setTwIsFinished] = useState(false);
-	const isFinished = () => setTwIsFinished(true);
+	// const [twIsFinished, setTwIsFinished] = useState(false);
+	// const isFinished = () => setTwIsFinished(true);
 
 	const [isClicked, setIsClicked] = useState(false);
 	const clickSet = () => setIsClicked(!isClicked);
@@ -93,7 +93,7 @@ export default function AboutMeText() {
 						onClick={clickSet}
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
-						transition={{ duration: 0.5, ease: "easeOut" }}
+						transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
 						className="about-me-text-wrapper">
 						<div className="about-me-text">
 							<h2>My Values</h2>

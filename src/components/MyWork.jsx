@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 import MyWorkHero from "./my-work/MyWorkHero";
 import ClickedCard from "./project-cards/ClickedCard";
 import ContactMe from "./Contact";
+import MySkills from "./my-work/MyWorkSkills";
 
 export default function MyWork() {
 	const [selectedProject, setSelectedProject] = useState({ id: -1 });
@@ -19,10 +20,6 @@ export default function MyWork() {
 	const handleClose = () => {
 		setSelectedProject({ id: -1 });
 	};
-	// const handleClick = (id) => {
-	// 	setSelectedId(id);
-	// 	console.log("changed");
-	// };
 
 	const myWorkRef = useRef(null);
 	const isInView = useInView(myWorkRef, { once: true });
@@ -31,9 +28,13 @@ export default function MyWork() {
 		<>
 			<div ref={myWorkRef} id="my-work" className="spacer purple-layer"></div>
 			<section className="my-work-section">
-				<div className="mw-content-wrapper">
-					{isInView && <MyWorkHero isInView={isInView} />}
-					{/* <div className="mw-contrast-stripe"> */}
+				<div className="mw-content-wrapper row">
+					<div className="col-lg-6 m-auto">
+						{isInView && <MyWorkHero isInView={isInView} />}
+					</div>
+					<div className="col-lg-6 m-auto">
+						{isInView && <MySkills isInView={isInView} />}
+					</div>
 
 					<div className="container-fluid">
 						<div className="row">
@@ -53,14 +54,15 @@ export default function MyWork() {
 								/>
 							))}
 						</div>
+						<AnimatePresence>
+							{selectedProject.id != -1 && (
+								<ClickedCard
+									selectedProject={selectedProject}
+									handleClose={handleClose}
+								/>
+							)}
+						</AnimatePresence>
 					</div>
-
-					{selectedProject.id != -1 && (
-						<ClickedCard
-							selectedProject={selectedProject}
-							handleClose={handleClose}
-						/>
-					)}
 				</div>
 
 				<ContactMe email="arikabdullah1122@gmail.com" discord="" />

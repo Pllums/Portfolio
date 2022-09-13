@@ -9,10 +9,9 @@ export default function ProjectCard(props) {
 		<div className="col-lg-4 col-md-6">
 			<motion.div
 				key={props.id}
-				layoutId={props.title}
 				onClick={props.handleClick}
-				onMouseEnter={() => setIsHovering(!isHovering)}
-				onMouseLeave={() => setIsHovering(!isHovering)}
+				// onMouseEnter={() => setIsHovering(!isHovering)}
+				// onMouseLeave={() => setIsHovering(!isHovering)}
 				style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px #000" }}
 				className="test-card">
 				<img src={props.img}></img>

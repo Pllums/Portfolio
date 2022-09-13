@@ -253,14 +253,33 @@ header i {
 	margin-left: 2rem;
 	margin-bottom: 10rem;
 }
+
+.skills-hero {
+	text-align: center;
+	transform: translateY(-20rem);
+	color: aliceblue;
+	margin-bottom: 10rem;
+}
 .mw-hero h1 {
 	font-size: 4rem;
 	margin-bottom: 3rem;
 }
 
+.skills-hero h1 {
+	font-size: 4rem;
+	margin-bottom: 3rem;
+	margin-right: 2rem;
+}
+
 .mw-hero-text {
 	font-size: 1.2rem;
 	max-width: 50ch;
+}
+.skills-hero-text {
+	text-align: right;
+	font-size: 1.2rem;
+	max-width: 50ch;
+	margin: auto;
 }
 
 .mw-contrast-stripe {
@@ -334,8 +353,8 @@ header i {
 	background-color: #6b59e2;
 	border-radius: 1.5rem;
 	box-shadow: 0 0 20px rgb(34, 0, 56);
-	width: clamp(50%, 700px, 90%);
-	min-height: 50rem;
+	width: clamp(50%, 800px, 90%);
+	min-height: 40rem;
 	margin: auto;
 	border-radius: 0.8rem;
 	display: flex;
@@ -363,9 +382,15 @@ header i {
 .clicked-card .card-header img {
 	width: 100%;
 	border-radius: inherit;
+	margin-bottom: 1rem;
 }
 .card-header .title {
 	position: absolute;
+}
+
+.clicked-card-col {
+	position: relative;
+	z-index: 2;
 }
 
 .card-info {
@@ -448,7 +473,8 @@ header i {
 }
 
 @media (max-width: 3441px) {
-	.mw-hero {
+	.mw-hero,
+	.skills-hero {
 		margin-bottom: 3rem;
 	}
 	.hover-card .project-content {
@@ -483,6 +509,10 @@ header i {
 }
 
 @media (min-width: 578px) and (max-width: 1681px) {
+	.mw-hero,
+	.skills-hero {
+		margin-bottom: 3rem;
+	}
 	.project-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -493,7 +523,12 @@ header i {
 	}
 }
 
-@media (max-width: 577px) {
+@media (max-width: 577px) and (max-width: 769px) {
+	.mw-hero,
+	.skills-hero {
+		text-align: left;
+		margin-left: 2rem;
+	}
 	.title h1 {
 		font-size: 3rem;
 	}

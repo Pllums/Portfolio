@@ -1,39 +1,4 @@
 import { motion } from "framer-motion";
-import Backdrop from "../Backdrop";
-import { projects } from "../../Projects";
-
-// export default function ClickedCard(props) {
-// 	return (
-// 		<motion.div
-// 			className="clicked-card"
-// 			layoutId={props.layoutId}
-// 			initial={{ position: "relative", opacity: 0 }}
-// 			animate={{
-// 				position: "absolute",
-// 				x: 0,
-// 				y: 0,
-// 				opacity: 1,
-// 				scale: 3,
-// 				transition: { duration: 0.5 },
-// 			}}
-// 			exit={{
-// 				opacity: 0,
-// 				scale: 0,
-// 				transition: {
-// 					delay: 0.3,
-// 					duration: 0.5,
-// 				},
-// 			}}>
-// 			<motion.h2>Test</motion.h2>
-// 			<hr />
-// 			<motion.span>
-// 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aut
-// 				natus, nisi tenetur fuga iusto facilis ullam quam doloribus. Pariatur
-// 				enim accusamus hic harum nihil?
-// 			</motion.span>
-// 		</motion.div>
-// 	);
-// }
 
 export default function ClickedCard(props) {
 	return (
@@ -73,7 +38,7 @@ export default function ClickedCard(props) {
 				<motion.span
 					className="card-closer"
 					onClick={props.handleClose}
-					whileHover={{ scale: 1.1, cursor: "pointer" }}
+					whileHover={{ scale: 1.3, cursor: "pointer" }}
 					whileTap={{ scale: 0.9 }}>
 					<i class="fa-solid fa-xmark close-button"></i>
 				</motion.span>
