@@ -369,7 +369,7 @@ header i {
 	border-radius: 1.5rem;
 	box-shadow: 0 0 20px rgb(34, 0, 56);
 	width: clamp(50%, 800px, 90%);
-	min-height: 40rem;
+	min-height: 50rem;
 	margin: auto;
 	border-radius: 0.8rem;
 	display: flex;
@@ -488,6 +488,9 @@ header i {
 }
 
 @media (max-width: 3441px) {
+	.mw-content-wrapper {
+		min-height: fit-content;
+	}
 	.mw-hero,
 	.skills-hero {
 		margin-bottom: 3rem;
@@ -551,9 +554,23 @@ header i {
 
 /* CTA section styling  */
 
+/* .contact {
+	position: relative;
+	width: 100vw;
+	min-height: 100vh;
+} */
+
 .cta-wrapper {
+	margin: auto;
+	max-width: 2560px;
+	position: relative;
 }
 
 .cta-title {
-	font-size: 2rem;
+	font-size: 5rem;
+	color: #fff;
+}
+
+.cta-title span {
+	font-size: 6rem;
 }
