@@ -6,14 +6,13 @@ export default function ProjectCard(props) {
 	const [isHovering, setIsHovering] = useState(false);
 
 	return (
-		<div className="col-lg-4 col-md-6">
+		<div className="col-lg-4 col-md-6 ">
 			<motion.div
 				key={props.id}
 				onClick={props.handleClick}
 				// onMouseEnter={() => setIsHovering(!isHovering)}
 				// onMouseLeave={() => setIsHovering(!isHovering)}
-				style={{ borderRadius: "1rem", boxShadow: "0px 10px 30px #000" }}
-				className="test-card">
+				className="project-card">
 				<img src={props.img}></img>
 				{/* <AnimatePresence>
 					{isHovering && (

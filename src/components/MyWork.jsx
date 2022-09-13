@@ -66,8 +66,6 @@ export default function MyWork() {
 				</div>
 
 				<ContactMe email="arikabdullah1122@gmail.com" discord="" />
-				{/* </div> */}
-				{/* </div> */}
 			</section>
 		</>
 	);

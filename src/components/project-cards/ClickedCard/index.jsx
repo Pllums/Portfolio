@@ -4,6 +4,7 @@ export default function ClickedCard(props) {
 	return (
 		<motion.div
 			className="backdrop"
+			onClick={props.handleClose}
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}>
@@ -16,7 +17,7 @@ export default function ClickedCard(props) {
 				animate={{
 					position: "absolute",
 					x: 0,
-					y: 0,
+					y: -200,
 					opacity: 1,
 					scale: 1,
 					transition: { duration: 0.5 },
@@ -31,9 +32,6 @@ export default function ClickedCard(props) {
 				}}>
 				<motion.div className="card-header">
 					<img src={props.selectedProject.img}></img>
-					{/* <motion.div className="title">
-						<motion.h2>{props.selectedProject.title}</motion.h2>
-					</motion.div> */}
 				</motion.div>
 				<motion.span
 					className="card-closer"
@@ -46,28 +44,33 @@ export default function ClickedCard(props) {
 					<motion.h2>{props.selectedProject.title}</motion.h2>
 					<hr />
 					<motion.span>{props.selectedProject.content}</motion.span>
-					<motion.div className="project-tech">
-						<motion.span>
-							Technologies Used : {props.selectedProject.tech}
-						</motion.span>
-						<br />
-						<motion.span>
-							<a
-								href={props.selectedProject.codeURL}
-								rel="noreferrer"
-								target="_blank">
-								View the code
-							</a>
-						</motion.span>{" "}
-						<motion.span>
-							<a
-								href={props.selectedProject.site}
-								rel="noreferrer"
-								target="_blank">
-								See it in action
-							</a>
-						</motion.span>
-					</motion.div>
+					<div className="project-tech row">
+						<div className="col-lg-4 column">
+							<motion.span>
+								<a
+									href={props.selectedProject.codeURL}
+									rel="noreferrer"
+									target="_blank">
+									View the code
+								</a>
+							</motion.span>
+						</div>
+						<div className="col-lg-4 column">
+							<motion.span>
+								Technologies Used : {props.selectedProject.tech}
+							</motion.span>
+						</div>
+						<div className="col-lg-4 column">
+							<motion.span>
+								<a
+									href={props.selectedProject.site}
+									rel="noreferrer"
+									target="_blank">
+									See it in action
+								</a>
+							</motion.span>
+						</div>
+					</div>
 				</motion.div>
 			</motion.div>
 		</motion.div>

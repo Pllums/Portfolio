@@ -19,7 +19,7 @@ export default function MyWorkHero() {
 					myself, whereas others I was asked to build something for someone
 					else.{" "}
 					<span className="hover-click-text">
-						Hover on the project to learn more.
+						click on the project to learn more.
 					</span>
 				</span>
 			</motion.div>
