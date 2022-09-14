@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function ContactMe(props) {
+	const [copied, setCopied] = useState("");
+
+	const handleClick = () => {};
+
 	return (
 		<div id="contact">
 			<section className="cta-wrapper">
@@ -16,13 +21,27 @@ export default function ContactMe(props) {
 				<div>
 					<ul className="cta-list">
 						<li>
-							<motion.a>{props.email}</motion.a>
+							<span
+								onClick={() => {
+									setCopied(props.email);
+									navigator.clipboard.writeText(copied);
+								}}>
+								{props.email}
+							</span>
 						</li>
 						<li>
-							<motion.a>{props.discord}</motion.a>
+							<span
+								onClick={() => {
+									setCopied(props.discord);
+									navigator.clipboard.writeText(copied);
+								}}>
+								<i className="fa-brands fa-discord"></i>
+							</span>
 						</li>
 						<li>
-							<motion.a>{props.linkedIn}</motion.a>
+							<motion.a href={props.linkedIn} target="_blank" rel="noreferrer">
+								<i className="fa-brands fa-linkedin"></i>
+							</motion.a>
 						</li>
 					</ul>
 				</div>
