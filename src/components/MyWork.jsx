@@ -14,7 +14,6 @@ export default function MyWork() {
 		setSelectedProject((prevState) => {
 			return { ...prevState, ...project };
 		});
-		console.log(selectedProject.title);
 	};
 
 	const handleClose = () => {

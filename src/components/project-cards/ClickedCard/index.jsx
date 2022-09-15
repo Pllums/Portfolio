@@ -39,20 +39,22 @@ export default function ClickedCard(props) {
 					onClick={props.handleClose}
 					whileHover={{ scale: 1.3, cursor: "pointer" }}
 					whileTap={{ scale: 0.9 }}>
-					<i class="fa-solid fa-xmark close-button"></i>
+					<i className="fa-solid fa-xmark close-button"></i>
 				</motion.span>
 				<motion.div className="card-info">
 					<hr />
 					<motion.span>{props.selectedProject.content}</motion.span>
 					<div className="project-tech row">
 						<div className="col-lg-4 column">
-							<motion.span>
-								<a
+							<motion.span
+								whileHover={{ scale: 1.1 }}
+								whileTap={{ scale: 0.9 }}>
+								<motion.a
 									href={props.selectedProject.codeURL}
 									rel="noreferrer"
 									target="_blank">
 									View the code
-								</a>
+								</motion.a>
 							</motion.span>
 						</div>
 						<div className="col-lg-4 column">
@@ -61,13 +63,15 @@ export default function ClickedCard(props) {
 							</motion.span>
 						</div>
 						<div className="col-lg-4 column">
-							<motion.span>
-								<a
+							<motion.span
+								whileHover={{ scale: 1.1 }}
+								whileTap={{ scale: 0.9 }}>
+								<motion.a
 									href={props.selectedProject.site}
 									rel="noreferrer"
 									target="_blank">
 									See it in action
-								</a>
+								</motion.a>
 							</motion.span>
 						</div>
 					</div>

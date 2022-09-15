@@ -7,7 +7,7 @@
 }
 
 body {
-	background: linear-gradient(to bottom, #001220, #001f36);
+	background: #6b59e2;
 	margin: 0;
 	padding: 0;
 	font-family: "Raleway", sans-serif;
@@ -165,11 +165,6 @@ header i {
 .about-me-background {
 	width: 100%;
 	background-color: #6b59e2;
-	/* background-color: #3f3c71; */
-	/* background-color: #493a3a;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23635151' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%237c6969' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23938484' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23a9a0a0' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23bfbbbb' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23d6d5d5' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
-	background-attachment: fixed;
-	background-size: cover; */
 	padding: 5rem;
 	position: relative;
 }
@@ -186,12 +181,6 @@ header i {
 }
 
 .img-wrapper img {
-	/* position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%);
-	transform: translateY(-50%);
-	width: 45%; */
 	margin: auto;
 	scale: 0.8;
 	border-radius: 15px;
@@ -202,7 +191,6 @@ header i {
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgb(34, 0, 56);
 	width: clamp(450px, 75%, 800px);
-	/* height: fit-content; */
 	background: #0000007d;
 	margin: 2rem auto;
 	padding: 2rem;
@@ -222,27 +210,11 @@ header i {
 	font-size: 1.2rem;
 }
 
-@media (max-width: 821px) {
-	.about-me-background {
-		padding: unset;
-	}
-	.about-me-text-wrapper {
-		position: relative;
-	}
-	.img-wrapper img {
-		position: relative;
-		margin-bottom: -10rem;
-		border-radius: 50%;
-		scale: 0.5;
-	}
-}
 /* My work section styling */
 
 .my-work-section {
 	min-height: 100vh;
 	position: relative;
-	/* background-color: #001220; */
-	/* background: linear-gradient(to bottom, #001220, #001f36); */
 	background-image: url(./images//svgs/stacked-peaks-haikei.svg);
 }
 
@@ -303,7 +275,6 @@ header i {
 .project-grid {
 	display: grid;
 	gap: 1.5rem;
-	/* margin: auto; */
 	margin: 10rem auto;
 	padding: 0 2rem;
 	grid-template-columns: repeat(3, 1fr);
@@ -491,7 +462,87 @@ header i {
 	color: #6b59e2;
 }
 
+/* CTA section styling  */
+#contact {
+	margin: auto;
+	padding: 0rem 3rem;
+}
+
+.contact-nav {
+	translate: 0 -20rem;
+	cursor: pointer;
+}
+
+.cta-wrapper {
+	margin: auto;
+	padding: 2rem;
+	max-width: 2560px;
+	position: relative;
+	color: #fff;
+}
+
+.cta-content {
+	max-width: 45ch;
+	translate: 8.3rem;
+	font-size: 2.7rem;
+}
+.cta-vert-type {
+	font-size: 3rem;
+	font-weight: 700;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
+.cta-horz-type {
+	position: relative;
+	bottom: 0.8rem;
+}
+
+.cta-title h1 {
+	font-size: 3rem;
+}
+.cta-title-touch {
+	font-size: 6rem;
+	color: #6b59e2;
+}
+.cta-title-touch :first-child {
+	color: #fff;
+}
+
+.copied-card {
+	background-color: #011728;
+	border-radius: 0.8rem;
+	width: fit-content;
+	padding: 0.8rem;
+}
+
+.copied-card p {
+	margin: auto;
+}
+
+/* Media Queries  */
+@media (max-width: 821px) {
+	.about-me-background {
+		padding: unset;
+	}
+	.about-me-text-wrapper {
+		position: relative;
+	}
+	.img-wrapper img {
+		position: relative;
+		margin-bottom: -10rem;
+		border-radius: 50%;
+		scale: 0.5;
+	}
+}
+
 @media (max-width: 3441px) {
+	#contact {
+		max-width: 2560px;
+		margin: auto;
+		padding: 0rem 3rem;
+	}
+
 	.mw-content-wrapper {
 		min-height: fit-content;
 	}
@@ -507,6 +558,11 @@ header i {
 }
 
 @media (max-width: 1921px) {
+	#contact {
+		max-width: 1920px;
+		margin: auto;
+		padding: 0rem 3rem;
+	}
 	.mw-hero {
 		margin-bottom: 3rem;
 		transform: translateY(-10rem);
@@ -545,7 +601,30 @@ header i {
 	}
 }
 
+@media (min-width: 578px) and (max-width: 769px) {
+	.lg-cta {
+		display: none;
+	}
+}
+@media (min-width: 769px) {
+	.sm-cta {
+		display: none;
+	}
+}
+
 @media (max-width: 577px) and (max-width: 769px) {
+	.lg-cta {
+		display: none;
+	}
+	.sm-cta {
+		display: block;
+	}
+	.sm-cta-content {
+		font-size: 1.5rem;
+	}
+	.contact-nav {
+		translate: 0 0;
+	}
 	.mw-hero,
 	.skills-hero {
 		text-align: left;
@@ -554,64 +633,4 @@ header i {
 	.title h1 {
 		font-size: 3rem;
 	}
-}
-
-/* CTA section styling  */
-#contact {
-	max-width: 1920px;
-	margin: auto;
-}
-
-.contact-nav {
-	translate: 0 -20rem;
-	cursor: pointer;
-}
-
-.cta-wrapper {
-	margin: auto;
-	padding: 2rem;
-	max-width: 2560px;
-	position: relative;
-	color: #fff;
-}
-
-.cta-content {
-	width: 45ch;
-	translate: 8.3rem;
-	font-size: 2.7rem;
-}
-.cta-vert-type {
-	font-size: 3rem;
-	writing-mode: vertical-rl;
-	text-orientation: upright;
-}
-
-.cta-horz-type {
-	position: relative;
-	bottom: 0.8rem;
-}
-
-.cta-title h1 {
-	font-size: 3rem;
-}
-.cta-title-touch {
-	color: #6b59e2;
-}
-.cta-title-touch :first-child {
-	color: #fff;
-}
-.cta-title span {
-	font-size: 6rem;
-}
-
-.copied-card {
-	/* display: inline-block; */
-	background-color: #011728;
-	border-radius: 0.8rem;
-	width: fit-content;
-	padding: 0.8rem;
-}
-
-.copied-card p {
-	margin: auto;
 }
