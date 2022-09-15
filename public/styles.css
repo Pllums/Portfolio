@@ -365,11 +365,12 @@ header i {
 
 .clicked-card {
 	position: relative;
-	background-color: #6b59e2;
+	background-color: #011728;
+	color: #fff;
 	border-radius: 1.5rem;
 	box-shadow: 0 0 20px rgb(34, 0, 56);
 	width: clamp(50%, 800px, 90%);
-	min-height: 50rem;
+	min-height: fit-content;
 	margin: auto;
 	border-radius: 0.8rem;
 	display: flex;
@@ -380,6 +381,7 @@ header i {
 
 .card-closer {
 	position: absolute;
+	color: red;
 	top: 1rem;
 	right: 1rem;
 }
@@ -411,7 +413,8 @@ header i {
 
 .card-info {
 	font-size: 1.2rem;
-	padding: 0 2rem;
+	width: 100%;
+	padding: 0 2rem 10rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -554,12 +557,15 @@ header i {
 }
 
 /* CTA section styling  */
+#contact {
+	max-width: 1920px;
+	margin: auto;
+}
 
-/* .contact {
-	position: relative;
-	width: 100vw;
-	min-height: 100vh;
-} */
+.contact-nav {
+	translate: 0 -20rem;
+	cursor: pointer;
+}
 
 .cta-wrapper {
 	margin: auto;
@@ -569,10 +575,43 @@ header i {
 	color: #fff;
 }
 
+.cta-content {
+	width: 45ch;
+	translate: 8.3rem;
+	font-size: 2.7rem;
+}
+.cta-vert-type {
+	font-size: 3rem;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
+.cta-horz-type {
+	position: relative;
+	bottom: 0.8rem;
+}
+
 .cta-title h1 {
 	font-size: 3rem;
 }
-
+.cta-title-touch {
+	color: #6b59e2;
+}
+.cta-title-touch :first-child {
+	color: #fff;
+}
 .cta-title span {
 	font-size: 6rem;
+}
+
+.copied-card {
+	/* display: inline-block; */
+	background-color: #011728;
+	border-radius: 0.8rem;
+	width: fit-content;
+	padding: 0.8rem;
+}
+
+.copied-card p {
+	margin: auto;
 }

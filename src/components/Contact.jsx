@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import CopiedCard from "./contact/TextCopiedCard";
+import ContactNav from "./contact/ContactNav";
 
 export default function ContactMe(props) {
 	const [copied, setCopied] = useState("");
@@ -12,39 +14,22 @@ export default function ContactMe(props) {
 				<div className="cta-title">
 					<motion.h1>
 						Let's get in <br />
-						<span>touch</span>
+						<span className="cta-title-touch">
+							tou<span>c</span>h
+						</span>
 					</motion.h1>
 				</div>
-				<span className="cta-content">
-					Contact me below and let's bring your ideas to life
-				</span>
-				<div>
-					<ul className="cta-list">
-						<li>
-							<span
-								onClick={() => {
-									setCopied(props.email);
-									navigator.clipboard.writeText(copied);
-								}}>
-								{props.email}
-							</span>
-						</li>
-						<li>
-							<span
-								onClick={() => {
-									setCopied(props.discord);
-									navigator.clipboard.writeText(copied);
-								}}>
-								<i className="fa-brands fa-discord"></i>
-							</span>
-						</li>
-						<li>
-							<motion.a href={props.linkedIn} target="_blank" rel="noreferrer">
-								<i className="fa-brands fa-linkedin"></i>
-							</motion.a>
-						</li>
-					</ul>
+				<div className="cta-content">
+					<span className="cta-vert-type">lick</span>
+					<span className="cta-horz-type">
+						my links to contact me and let's bring your ideas to life
+					</span>
 				</div>
+				<ContactNav
+					email="arikabdullah1122@gmail.com"
+					discord="Plum#3107"
+					linkedIn="https://www.linkedin.com/in/arik-abdullah-425552240/"
+				/>
 			</section>
 		</div>
 	);

@@ -33,6 +33,7 @@ export default function ClickedCard(props) {
 				<motion.div className="card-header">
 					<img src={props.selectedProject.img}></img>
 				</motion.div>
+				<motion.h2>{props.selectedProject.title}</motion.h2>
 				<motion.span
 					className="card-closer"
 					onClick={props.handleClose}
@@ -41,7 +42,6 @@ export default function ClickedCard(props) {
 					<i class="fa-solid fa-xmark close-button"></i>
 				</motion.span>
 				<motion.div className="card-info">
-					<motion.h2>{props.selectedProject.title}</motion.h2>
 					<hr />
 					<motion.span>{props.selectedProject.content}</motion.span>
 					<div className="project-tech row">
