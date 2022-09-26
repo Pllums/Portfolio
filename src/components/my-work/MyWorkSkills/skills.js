@@ -2,6 +2,7 @@ const skills = [
 	{ id: 0, key: 0, skill: "HTML" },
 	{ id: 1, key: 1, skill: "CSS" },
 	{ id: 2, key: 2, skill: "JavaScript" },
+	{ id: 3, key: 3, skill: "TypeScript" },
 ];
 
 const frameworks = [

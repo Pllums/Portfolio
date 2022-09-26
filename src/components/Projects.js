@@ -32,4 +32,15 @@ export const projects = [
 		codeURL: "https://github.com/Pllums/Boudoir-X-Alyssa",
 		site: "",
 	},
+	{
+		id: 3,
+		key: 3,
+		title: "Noter",
+		img: "./images/BoudoirXAlyssa.png",
+		content:
+			"Noter is a browser based note taking application I built using React and TypeScript. It is complete with Light/Dark themes using useContext and useEffect hooks to set notes in your browsers storage. Your notes stay yours.",
+		tech: "HTML, CSS, JavaScript, Node.js",
+		codeURL: "https://github.com/Pllums/noter",
+		site: "https://noter-q17c.vercel.app/",
+	},
 ];
