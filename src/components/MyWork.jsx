@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { projects } from "./Projects";
 import ProjectCard from "./project-cards/ProjectCard";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { AnimatePresence, useInView } from "framer-motion";
 import MyWorkHero from "./my-work/MyWorkHero";
 import ClickedCard from "./project-cards/ClickedCard";
 import ContactMe from "./Contact";
@@ -54,7 +54,7 @@ export default function MyWork() {
 							))}
 						</div>
 						<AnimatePresence>
-							{selectedProject.id != -1 && (
+							{selectedProject.id !== -1 && (
 								<ClickedCard
 									selectedProject={selectedProject}
 									handleClose={handleClose}
