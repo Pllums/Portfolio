@@ -27,7 +27,7 @@ export default function MyWork() {
 		<>
 			<div ref={myWorkRef} id="my-work" className="spacer purple-layer"></div>
 			<section className="my-work-section">
-				<div className="mw-content-wrapper row g-3">
+				<div className="mw-content-wrapper row ">
 					<div className="col-lg-6 m-auto">
 						{isInView && <MyWorkHero isInView={isInView} />}
 					</div>
@@ -36,7 +36,7 @@ export default function MyWork() {
 					</div>
 
 					<div className="container-fluid">
-						<div className="row">
+						<div className="row g-3">
 							{projects.map((project) => (
 								<ProjectCard
 									key={project.key}

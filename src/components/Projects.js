@@ -39,7 +39,7 @@ export const projects = [
 		img: "./images/Noter.png",
 		content:
 			"Noter is a browser based note taking application I built using React and TypeScript. It is complete with Light/Dark themes using useContext and useEffect hooks to set notes in your browsers storage. Your notes stay yours.",
-		tech: "HTML, CSS, JavaScript, Node.js",
+		tech: "React, TypeScript, CSS",
 		codeURL: "https://github.com/Pllums/noter",
 		site: "https://noter-q17c.vercel.app/",
 	},
