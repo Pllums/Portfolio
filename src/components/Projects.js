@@ -30,7 +30,7 @@ export const projects = [
 			"This is a site I made for my wife's photography business. The site features a rich landing page, portfolio pages and contact page.",
 		tech: "HTML, CSS, JavaScript, Node.js",
 		codeURL: "https://github.com/Pllums/Boudoir-X-Alyssa",
-		site: "",
+		site: "https://boudoir-x-alyssa.vercel.app/",
 	},
 	{
 		id: 3,
