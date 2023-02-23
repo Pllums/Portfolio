@@ -190,7 +190,7 @@ header i {
 .about-me-text-wrapper {
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgb(34, 0, 56);
-	width: clamp(450px, 75%, 800px);
+	width: clamp(350px, 75%, 800px);
 	background: #0000007d;
 	margin: 2rem auto;
 	padding: 2rem;
