@@ -15,7 +15,7 @@ export default function Header() {
 					options={{ cursor: "_", loop: true }}
 					onInit={(typewriter) => {
 						typewriter
-							.typeString("Front-end Web Developer")
+							.typeString("Full-Stack Web Developer")
 							.pauseFor(1500)
 							.deleteAll()
 							.typeString("Husband and father")
