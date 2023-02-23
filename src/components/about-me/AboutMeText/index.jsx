@@ -23,13 +23,13 @@ export default function AboutMeText() {
 					<hr />
 					<span className="about-tw-start">
 						<Typewriter
-							options={{ cursor: "_" }}
+							options={{ cursor: "_", delay: 10 }}
 							onInit={(typewriter) => {
 								typewriter
 									.typeString("name: Arik Abdul")
 									.start()
 									.deleteAll(1)
-									.changeDelay(40)
+									// .changeDelay(200)
 									.typeString(
 										"<strong>BREACH DETECTED, INITIATE WIPE...</strong>"
 									)

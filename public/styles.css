@@ -625,6 +625,10 @@ header i {
 	.contact-nav {
 		translate: 0 0;
 	}
+
+	.cta-title-touch :first-child {
+		color: #6b59e2;
+	}
 	.mw-hero,
 	.skills-hero {
 		text-align: left;
